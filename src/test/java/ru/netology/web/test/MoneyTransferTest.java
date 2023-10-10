@@ -26,7 +26,7 @@ class MoneyTransferTest {
     }
 
     @Test
-    void ShouldTransferFromFirstToSecond() {
+    void shouldTransferFromFirstToSecond() {
         var firstCardInfo = getFirstCardInfo();
         var secondCardInfo = getSecondCardInfo();
         var firsCardBalance = dashboardPage.getCardBalance(firstCardInfo);
@@ -43,7 +43,7 @@ class MoneyTransferTest {
     }
 
     @Test
-    void ShouldGetErrorMessageIfAmountMoreBalance() {
+    void shouldGetErrorMessageIfAmountMoreBalance() {
         var firstCardInfo = getFirstCardInfo();
         var secondCardInfo = getSecondCardInfo();
         var firsCardBalance = dashboardPage.getCardBalance(firstCardInfo);
