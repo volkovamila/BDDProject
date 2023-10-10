@@ -1,5 +1,6 @@
 package ru.netology.web.page;
 
+
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
@@ -20,9 +21,9 @@ public class DashboardPage {
     public DashboardPage() {
         heading.shouldBe(visible);
     }
-
+;
     public int getCardBalance(DataHelper.CardInfo cardInfo) {
-        var text = cards.findBy(Condition.text(String.valueOf(cardInfo))).getText();
+        var text = cards.findBy(Condition.text(cardInfo.getCardNumber().substring(15))).getText();
         return extractBalance(text);
     }
 
